@@ -1,0 +1,27 @@
+.jumbotron {
+    background-color: chartreuse;
+}
+
+.footer {
+
+    background-color: chartreuse;
+    color: black;
+    padding: 0 px;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    bottom: 0px;
+}
+
+/* .footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#999;
+ } */
+
+ .p {
+text-align: center;
+}

@@ -1,0 +1,1255 @@
+@namespace "http://www.w3.org/1999/xhtml";
+
+25	
+26	html {
+27	    display: block;
+28	}
+29	
+30	/* children of the <head> element all have display:none */
+31	head, link, meta, script, style, title {
+32	    display: none;
+33	}
+34	
+35	/* generic block-level elements */
+36	
+37	body {
+38	    display: block;
+39	    margin: 8px;
+40	}
+41	
+42	p {
+43	    display: block;
+44	    -webkit-margin-before: 1__qem;
+45	    -webkit-margin-after: 1__qem;
+46	    -webkit-margin-start: 0;
+47	    -webkit-margin-end: 0;
+48	}
+49	
+50	address, article, aside, div, footer, header, hgroup, layer, main, nav, section {
+51	    display: block;
+52	}
+53	
+54	marquee {
+55	    display: inline-block;
+56	}
+57	
+58	blockquote {
+59	    display: block;
+60	    -webkit-margin-before: 1__qem;
+61	    -webkit-margin-after: 1em;
+62	    -webkit-margin-start: 40px;
+63	    -webkit-margin-end: 40px;
+64	}
+65	
+66	figcaption {
+67	    display: block;
+68	}
+69	
+70	figure {
+71	    display: block;
+72	    -webkit-margin-before: 1em;
+73	    -webkit-margin-after: 1em;
+74	    -webkit-margin-start: 40px;
+75	    -webkit-margin-end: 40px;
+76	}
+77	
+78	q {
+79	    display: inline;
+80	}
+81	
+82	q::before {
+83	    content: open-quote;
+84	}
+85	
+86	q::after {
+87	    content: close-quote;
+88	}
+89	
+90	center {
+91	    display: block;
+92	    /* special centering to be able to emulate the html4/netscape behaviour */
+93	    text-align: -webkit-center;
+94	}
+95	
+96	hr {
+97	    display: block;
+98	    -webkit-margin-before: 0.5em;
+99	    -webkit-margin-after: 0.5em;
+100	    -webkit-margin-start: auto;
+101	    -webkit-margin-end: auto;
+102	    border-style: inset;
+103	    border-width: 1px;
+104	}
+105	
+106	video {
+107	    object-fit: contain;
+108	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+109	    -webkit-tap-highlight-color: transparent;
+110	#endif
+111	}
+112	
+113	/* heading elements */
+114	
+115	h1 {
+116	    display: block;
+117	    font-size: 2em;
+118	    -webkit-margin-before: 0.67__qem;
+119	    -webkit-margin-after: 0.67em;
+120	    -webkit-margin-start: 0;
+121	    -webkit-margin-end: 0;
+122	    font-weight: bold;
+123	}
+124	
+125	:matches(article, aside, nav, section) h1 {
+126	    font-size: 1.5em;
+127	    -webkit-margin-before: 0.83__qem;
+128	    -webkit-margin-after: 0.83em;
+129	}
+130	
+131	:matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+132	    font-size: 1.17em;
+133	    -webkit-margin-before: 1__qem;
+134	    -webkit-margin-after: 1em;
+135	}
+136	
+137	:matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+138	    font-size: 1.00em;
+139	    -webkit-margin-before: 1.33__qem;
+140	    -webkit-margin-after: 1.33em;
+141	}
+142	
+143	:matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+144	    font-size: .83em;
+145	    -webkit-margin-before: 1.67__qem;
+146	    -webkit-margin-after: 1.67em;
+147	}
+148	
+149	:matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) :matches(article, aside, nav, section) h1 {
+150	    font-size: .67em;
+151	    -webkit-margin-before: 2.33__qem;
+152	    -webkit-margin-after: 2.33em;
+153	}
+154	
+155	h2 {
+156	    display: block;
+157	    font-size: 1.5em;
+158	    -webkit-margin-before: 0.83__qem;
+159	    -webkit-margin-after: 0.83em;
+160	    -webkit-margin-start: 0;
+161	    -webkit-margin-end: 0;
+162	    font-weight: bold;
+163	}
+164	
+165	h3 {
+166	    display: block;
+167	    font-size: 1.17em;
+168	    -webkit-margin-before: 1__qem;
+169	    -webkit-margin-after: 1em;
+170	    -webkit-margin-start: 0;
+171	    -webkit-margin-end: 0;
+172	    font-weight: bold;
+173	}
+174	
+175	h4 {
+176	    display: block;
+177	    -webkit-margin-before: 1.33__qem;
+178	    -webkit-margin-after: 1.33em;
+179	    -webkit-margin-start: 0;
+180	    -webkit-margin-end: 0;
+181	    font-weight: bold;
+182	}
+183	
+184	h5 {
+185	    display: block;
+186	    font-size: .83em;
+187	    -webkit-margin-before: 1.67__qem;
+188	    -webkit-margin-after: 1.67em;
+189	    -webkit-margin-start: 0;
+190	    -webkit-margin-end: 0;
+191	    font-weight: bold;
+192	}
+193	
+194	h6 {
+195	    display: block;
+196	    font-size: .67em;
+197	    -webkit-margin-before: 2.33__qem;
+198	    -webkit-margin-after: 2.33em;
+199	    -webkit-margin-start: 0;
+200	    -webkit-margin-end: 0;
+201	    font-weight: bold;
+202	}
+203	
+204	/* tables */
+205	
+206	table {
+207	    display: table;
+208	    border-collapse: separate;
+209	    border-spacing: 2px;
+210	    border-color: gray;
+211	}
+212	
+213	thead {
+214	    display: table-header-group;
+215	    vertical-align: middle;
+216	    border-color: inherit;
+217	}
+218	
+219	tbody {
+220	    display: table-row-group;
+221	    vertical-align: middle;
+222	    border-color: inherit;
+223	}
+224	
+225	tfoot {
+226	    display: table-footer-group;
+227	    vertical-align: middle;
+228	    border-color: inherit;
+229	}
+230	
+231	/* for tables without table section elements (can happen with XHTML or dynamically created tables) */
+232	table > tr {
+233	    vertical-align: middle;
+234	}
+235	
+236	col {
+237	    display: table-column;
+238	}
+239	
+240	colgroup {
+241	    display: table-column-group;
+242	}
+243	
+244	tr {
+245	    display: table-row;
+246	    vertical-align: inherit;
+247	    border-color: inherit;
+248	}
+249	
+250	td, th {
+251	    display: table-cell;
+252	    vertical-align: inherit;
+253	}
+254	
+255	th {
+256	    font-weight: bold;
+257	}
+258	
+259	caption {
+260	    display: table-caption;
+261	    text-align: -webkit-center;
+262	}
+263	
+264	/* lists */
+265	
+266	ul, menu, dir {
+267	    display: block;
+268	    list-style-type: disc;
+269	    -webkit-margin-before: 1__qem;
+270	    -webkit-margin-after: 1em;
+271	    -webkit-margin-start: 0;
+272	    -webkit-margin-end: 0;
+273	    -webkit-padding-start: 40px;
+274	}
+275	
+276	ol {
+277	    display: block;
+278	    list-style-type: decimal;
+279	    -webkit-margin-before: 1__qem;
+280	    -webkit-margin-after: 1em;
+281	    -webkit-margin-start: 0;
+282	    -webkit-margin-end: 0;
+283	    -webkit-padding-start: 40px;
+284	}
+285	
+286	li {
+287	    display: list-item;
+288	    text-align: -webkit-match-parent;
+289	}
+290	
+291	ul ul, ol ul {
+292	    list-style-type: circle;
+293	}
+294	
+295	ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+296	    list-style-type: square;
+297	}
+298	
+299	dd {
+300	    display: block;
+301	    -webkit-margin-start: 40px;
+302	}
+303	
+304	dl {
+305	    display: block;
+306	    -webkit-margin-before: 1__qem;
+307	    -webkit-margin-after: 1em;
+308	    -webkit-margin-start: 0;
+309	    -webkit-margin-end: 0;
+310	}
+311	
+312	dt {
+313	    display: block;
+314	}
+315	
+316	ol ul, ul ol, ul ul, ol ol {
+317	    -webkit-margin-before: 0;
+318	    -webkit-margin-after: 0;
+319	}
+320	
+321	/* form elements */
+322	
+323	form {
+324	    display: block;
+325	    margin-top: 0__qem;
+326	}
+327	
+328	label {
+329	    cursor: default;
+330	}
+331	
+332	legend {
+333	    display: block;
+334	    -webkit-padding-start: 2px;
+335	    -webkit-padding-end: 2px;
+336	    border: none;
+337	}
+338	
+339	fieldset {
+340	    display: block;
+341	    -webkit-margin-start: 2px;
+342	    -webkit-margin-end: 2px;
+343	    -webkit-padding-before: 0.35em;
+344	    -webkit-padding-start: 0.75em;
+345	    -webkit-padding-end: 0.75em;
+346	    -webkit-padding-after: 0.625em;
+347	    border: 2px groove ThreeDFace;
+348	    min-width: min-content;
+349	}
+350	
+351	button {
+352	    -webkit-appearance: button;
+353	}
+354	
+355	/* Form controls don't go vertical. */
+356	input, textarea, keygen, select, button, meter, progress {
+357	    -webkit-writing-mode: horizontal-tb !important;
+358	}
+359	
+360	input, textarea, keygen, select, button {
+361	    margin: 0__qem;
+362	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+363	    font: -webkit-small-control;
+364	#endif
+365	    color: initial;
+366	    letter-spacing: normal;
+367	    word-spacing: normal;
+368	    line-height: normal;
+369	    text-transform: none;
+370	    text-indent: 0;
+371	    text-shadow: none;
+372	    display: inline-block;
+373	    text-align: start;
+374	}
+375	
+376	input[type="hidden"] {
+377	    display: none;
+378	}
+379	
+380	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+381	textarea,
+382	input[type="range"],
+383	#endif
+384	input,
+385	input:matches([type="password"], [type="search"]) {
+386	    -webkit-appearance: textfield;
+387	#if defined(WTF_PLATFORM_MAC) && WTF_PLATFORM_MAC
+388	    color: text;
+389	    background-color: -apple-system-control-background;
+390	#else
+391	    background-color: white;
+392	#endif
+393	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+394	    border-radius: 5px;
+395	    font: 11px Helvetica, -webkit-pictograph;
+396	    border: 1px solid #4c4c4c;
+397	    padding: 0.2em 0.5em 0.3em 0.5em;
+398	#else
+399	    border: 2px inset;
+400	    padding: 1px;
+401	#endif
+402	    -webkit-rtl-ordering: logical;
+403	    -webkit-user-select: text;
+404	    cursor: auto;
+405	}
+406	
+407	#if defined(WTF_PLATFORM_MAC) && WTF_PLATFORM_MAC
+408	@media (prefers-dark-interface) {
+409	    input,
+410	    input:matches([type="password"], [type="search"]) {
+411	        background-color: transparent;
+412	    }
+413	}
+414	#endif
+415	
+416	input[type="search"] {
+417	    -webkit-appearance: searchfield;
+418	    box-sizing: border-box;
+419	}
+420	
+421	input::-webkit-textfield-decoration-container {
+422	    display: flex;
+423	    align-items: center;
+424	    content: none !important;
+425	}
+426	
+427	input::-webkit-clear-button {
+428	    -webkit-appearance: searchfield-cancel-button;
+429	    display: inline-block;
+430	    flex: none;
+431	    margin-left: 2px;
+432	}
+433	
+434	input[type="search"]::-webkit-search-cancel-button {
+435	    -webkit-appearance: searchfield-cancel-button;
+436	    display: block;
+437	    flex: none;
+438	    align-self: flex-start;
+439	    margin: auto 0;
+440	}
+441	
+442	input[type="search"]::-webkit-search-decoration {
+443	    -webkit-appearance: searchfield-decoration;
+444	    display: block;
+445	    flex: none;
+446	    align-self: flex-start;
+447	    margin: auto 0;
+448	}
+449	
+450	input[type="search"]::-webkit-search-results-decoration {
+451	    -webkit-appearance: searchfield-results-decoration;
+452	    display: block;
+453	    flex: none;
+454	    align-self: flex-start;
+455	    margin: auto 0;
+456	}
+457	
+458	input[type="search"]::-webkit-search-results-button {
+459	    -webkit-appearance: searchfield-results-button;
+460	    display: block;
+461	    flex: none;
+462	}
+463	
+464	#if defined(ENABLE_DATALIST_ELEMENT) && ENABLE_DATALIST_ELEMENT
+465	datalist {
+466	    display: none;
+467	}
+468	#endif
+469	
+470	#if defined(ENABLE_INPUT_TYPE_DATE) && ENABLE_INPUT_TYPE_DATE
+471	input[type="date"] {
+472	    align-items: center;
+473	    -webkit-appearance: menulist-button;
+474	    display: -webkit-inline-flex;
+475	    overflow: hidden;
+476	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+477	    width: 10em;
+478	#endif
+479	}
+480	#endif
+481	#if defined(ENABLE_INPUT_TYPE_DATETIME_INCOMPLETE) && ENABLE_INPUT_TYPE_DATETIME_INCOMPLETE
+482	input[type="datetime"] {
+483	    align-items: center;
+484	    -webkit-appearance: menulist-button;
+485	    display: -webkit-inline-flex;
+486	    overflow: hidden;
+487	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+488	    width: 10em;
+489	#endif
+490	}
+491	#endif
+492	#if defined(ENABLE_INPUT_TYPE_DATETIMELOCAL) && ENABLE_INPUT_TYPE_DATETIMELOCAL
+493	input[type="datetime-local"] {
+494	    align-items: center;
+495	    -webkit-appearance: menulist-button;
+496	    display: -webkit-inline-flex;
+497	    overflow: hidden;
+498	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+499	    width: 10em;
+500	#endif
+501	}
+502	#endif
+503	#if defined(ENABLE_INPUT_TYPE_MONTH) && ENABLE_INPUT_TYPE_MONTH
+504	input[type="month"] {
+505	    align-items: center;
+506	    -webkit-appearance: menulist-button;
+507	    display: -webkit-inline-flex;
+508	    overflow: hidden;
+509	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+510	    width: 10em;
+511	#endif
+512	}
+513	#endif
+514	#if defined(ENABLE_INPUT_TYPE_TIME) && ENABLE_INPUT_TYPE_TIME
+515	input[type="time"] {
+516	    align-items: center;
+517	    -webkit-appearance: menulist-button;
+518	    display: -webkit-inline-flex;
+519	    overflow: hidden;
+520	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+521	    width: 10em;
+522	#endif
+523	}
+524	#endif
+525	#if defined(ENABLE_INPUT_TYPE_WEEK) && ENABLE_INPUT_TYPE_WEEK
+526	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+527	input[type="week"] {
+528	    align-items: center;
+529	    -webkit-appearance: menulist-button;
+530	    display: -webkit-inline-flex;
+531	    overflow: hidden;
+532	    width: 10em;
+533	}
+534	#endif
+535	#endif
+536	
+537	input::-webkit-date-and-time-value {
+538	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+539	    margin-right: 18px;
+540	#else
+541	    margin: 1px 24px 1px 4px;
+542	    white-space: pre;
+543	#endif
+544	}
+545	
+546	input::-webkit-inner-spin-button {
+547	    -webkit-appearance: inner-spin-button;
+548	    display: block;
+549	    position: relative;
+550	    cursor: default;
+551	    /* This height property is ignored for input type "number" and others which
+552	     * use RenderTextControlSingleLine as renderer which sets height of spin
+553	     * button in layout(). */
+554	    height: 1.5em;
+555	    flex: none;
+556	    -webkit-user-select: none;
+557	}
+558	
+559	input::-webkit-strong-password-auto-fill-button {
+560	    flex-shrink: 1 !important;
+561	    font-family: -apple-system !important;
+562	    -webkit-text-security: none !important;
+563	    -webkit-user-select: none !important;
+564	    pointer-events: none !important;
+565	    text-align: right !important;
+566	    color: rgba(0, 0, 0, 0.8) !important;
+567	    padding-left: 6px !important;
+568	    white-space: nowrap !important;
+569	}
+570	
+571	input::-webkit-credentials-auto-fill-button {
+572	    -webkit-mask-image: -webkit-image-set(url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAAAXNSR0IB2cksfwAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAADyWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDx4bXA6TW9kaWZ5RGF0ZT4yMDE1LTA0LTAzVDE2OjA2OjI1PC94bXA6TW9kaWZ5RGF0ZT4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8eG1wOkNyZWF0ZURhdGU+MjAxNS0wNC0wM1QxNjowMzoxNjwveG1wOkNyZWF0ZURhdGU+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyPC90aWZmOllSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpSZXNvbHV0aW9uVW5pdD4yPC90aWZmOlJlc29sdXRpb25Vbml0PgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjwvdGlmZjpYUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT4xPC9leGlmOkNvbG9yU3BhY2U+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj4xNTwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4xMjwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoz37ZdAAAA5ElEQVQoFY2RsQ5BQRBFd9EgEYXv8QlaEqVGpfUPao3oKXyEQiJI1ERESaGmwnPu2k2QJ2uS82Z2du7s7jyTJInBWnCABeygoXwM6kwN1GELFo7wgOo/4gmFEovzWzyMiTMUlyFYJQT4wlucGko8T90xZv0j/5EusVpCuLr8FPK6NraHPmT8Oks8gI2bKEEOZhAauEJf3PX5Eb4ImpEG2gni0NWJvwdFYRvuoIHeoOUa++56+wpSxb6myf4J6qG5VWCt1ckPvHsksf531HSiDJ1VV9n15eJfJ+YkvWcMF+jFZa+KJ554xIc+jempAAAAAElFTkSuQmCC") 1x, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAYCAYAAADtaU2/AAAAAXNSR0IB2cksfwAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAADyWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDx4bXA6TW9kaWZ5RGF0ZT4yMDE1LTA0LTAzVDE2OjA2OjIxPC94bXA6TW9kaWZ5RGF0ZT4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8eG1wOkNyZWF0ZURhdGU+MjAxNS0wNC0wM1QxNjowMzoyNTwveG1wOkNyZWF0ZURhdGU+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyPC90aWZmOllSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpSZXNvbHV0aW9uVW5pdD4yPC90aWZmOlJlc29sdXRpb25Vbml0PgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjwvdGlmZjpYUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT4xPC9leGlmOkNvbG9yU3BhY2U+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj4zMDwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4yNDwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpGMDB3AAAB8UlEQVRIDbVWO07DQBS0QSJUNJQcAloOQMEZ6InSUMEBkFJEQihQkQKJklQUlFBQQoH4SHAKJDokAgIz4+wLs5u15RjypOF9dvaN197dkCS/NodwC7gG3hxuXI1jUcuyLKkDa7aE4B7IHM7hCcs5Rs6Y1RHlHBpXo6JXeXX45xLOxB8QN2QsD+sKz2B2E1iRhqnEsxIvI96U/M8hv6mtyjxXehGpk+tZ3RVzdQOgcPN4KkPuvNbse2mtSsxXPYl9TkIu41L4rowQjD0Fee2UwqcTzA65/TRNB0CzSg/ygHegT34D4FGxjVXkHx0XbmQfiIzfKtto4LWEy3m58XLQs2zNzPPByAltGwXj0EfFUecbUd4O8pFxZ98CSrC4bNfvypxvxBu6cubAl3DaRSfBxNRjXtxckw5GjU+RXJweUNGOPRTqnrWRWQP1HkkTaRSK98CLioYr5vV4BqigxarlxSbsmu0XzO8qLxRmw/WCiRyLmjYEgTfhEWAPTM88VV4ozDP9HEyyBijHLdKQ4l2AR+YAGBMNhcFJVgETU8+xqIXCVXNtxm9cdJyU58VVhUKe/khwB+55XaeYqDC/zdoUtbzWFDPj7fQCLFjB+Vf4xaA2SvkK65iumLvwJNLkOFL79xJXfQhwlQTjsnu61r+2fEs/b4ZbzrEPMzEAAAAASUVORK5CYII=") 2x);
+573	    -webkit-mask-size: 15px 12px;
+574	    width: 15px;
+575	    height: 12px;
+576	    margin-left: 3px;
+577	    margin-right: 2px;
+578	    background-color: black;
+579	    flex: none;
+580	    -webkit-user-select: none;
+581	}
+582	
+583	input::-webkit-credentials-auto-fill-button:hover {
+584	    background-color: rgb(0, 122, 255);
+585	}
+586	
+587	input::-webkit-credentials-auto-fill-button:active {
+588	    background-color: rgb(0, 60, 219);
+589	}
+590	
+591	input::-webkit-contacts-auto-fill-button {
+592	    -webkit-mask-image: -webkit-image-set(url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAMCAYAAABm+U3GAAAAAXNSR0IArs4c6QAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAADzWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDx4bXA6TW9kaWZ5RGF0ZT4yMDE2LTAzLTE2VDE0OjM4OjM5PC94bXA6TW9kaWZ5RGF0ZT4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoTWFjaW50b3NoKTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8eG1wOkNyZWF0ZURhdGU+MjAxNS0wNC0wM1QxNjowMzoxNjwveG1wOkNyZWF0ZURhdGU+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyPC90aWZmOllSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpSZXNvbHV0aW9uVW5pdD4yPC90aWZmOlJlc29sdXRpb25Vbml0PgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjwvdGlmZjpYUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT42NTUzNTwvZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MjI8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+MTI8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KDsFf/AAAALpJREFUOMtjYMAEjECcAcTXgPgBEPcBMQ8DHvD//38MjA0UgtSi4UpqGDwdi8GTqGFwEz1dPJkaBttjMdgah5l3gHgKEDNBDWMG4plAfB2XI14hGfoEj2PLoWqWATE3EK8G4n9AnIdLwyQkg7sY8ANQ0vwLxK+B+A8QJ+MKCnUgPoZk8D4gFiVgeDQQPwficPQwFoCmhudYwheGQeHZAFVLVORpAPFLPAai4xdQXxE0eDYJhsLwNEIGAwBaGtf92KSJygAAAABJRU5ErkJggg==") 1x, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAYCAYAAACBbx+6AAAAAXNSR0IArs4c6QAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAADzWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDx4bXA6TW9kaWZ5RGF0ZT4yMDE2LTAzLTE2VDE0OjM4OjQ5PC94bXA6TW9kaWZ5RGF0ZT4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoTWFjaW50b3NoKTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8eG1wOkNyZWF0ZURhdGU+MjAxNS0wNC0wM1QxNjowMzoyNTwveG1wOkNyZWF0ZURhdGU+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyPC90aWZmOllSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpSZXNvbHV0aW9uVW5pdD4yPC90aWZmOlJlc29sdXRpb25Vbml0PgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjwvdGlmZjpYUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT42NTUzNTwvZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+NDQ8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+MjQ8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KZQbeMQAAAZxJREFUWMPNlrFKA0EQhhMUBVErCy0ECxFUECzEWt9ALNMbDkv1AQSLgEhEEG0sBAsbEYKFj6AIVtoJQTClBALRmBjXf2AP1mNvM3vZizvwwR3szX0sszObyfBjFhyBV1AFJbAGBrkJhBB/npPAiT4QgBb9R8MbmPFJ+DhGVOXKF+F+UGcI130RHmbIhoz4UhJNhmxL1roXwmWG8IsvJTEEnhnCj77s8LRFDU9aCF+CL5BnSuZBQ35njCyoMGQrci1XWD0XQQfZQFnb5JTeBUP43LKGtyPfB4adVdftcP5D7erDIPsJRm0PHWJXyfEDchHZHGgra/a4XYLiwSB8l/QugSgoedqhtEa2YNPWKA4MwvvdXH400qdxsjbCEzFlUQNj3d7WDBtSTDI4KAbAtyZhg9MdGMKU4ySSm96zSYXnDSUx5eI+LKWLsnUd6mQ7CdPkWgAb4MkgfA/Wwfh/TbplOVFqFlNOvcyfgaVeCM+B6wSScdyAxbSEN+VsF46hg7rlWnhVThqREpR7xaXwbYqyISWXwtUeCL+7Ev4FRky1YsGhhMUAAAAASUVORK5CYII=") 2x);
+593	    -webkit-mask-size: 22px 12px;
+594	    width: 22px;
+595	    height: 12px;
+596	    margin-left: 3px;
+597	    margin-right: 2px;
+598	    background-color: black;
+599	    flex: none;
+600	    -webkit-user-select: none;
+601	}
+602	
+603	input::-webkit-contacts-auto-fill-button:hover {
+604	    background-color: rgb(0, 122, 255);
+605	}
+606	
+607	input::-webkit-contacts-auto-fill-button:active {
+608	    background-color: rgb(0, 60, 219);
+609	}
+610	
+611	input::-webkit-caps-lock-indicator {
+612	    -webkit-appearance: caps-lock-indicator;
+613	    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"><path fill="black" fill-opacity="0.4" d="M12.5 0.5A 4 4 0 0 1 16.5 4.5L 16.5 12.5A 4 4 0 0 1 12.5 16.5L 4.5 16.5A 4 4 0 0 1 0.5 12.5L 0.5 4.5A 4 4 0 0 1 4.5 0.5L 12.5 0.5M 8.5 2L 4 7L 6.25 7L 6.25 10.25L 10.75 10.25L 10.75 7L 13 7L 8.5 2M 10.75 12L 6.25 12L 6.25 14.25L 10.75 14.25L 10.75 12"/></svg>');
+614	    align-self: stretch;
+615	    flex: none;
+616	    -webkit-user-select: none;
+617	}
+618	
+619	#if defined(ENABLE_DATALIST_ELEMENT) && ENABLE_DATALIST_ELEMENT
+620	input::-webkit-list-button {
+621	    -webkit-appearance: list-button;
+622	    display: block;
+623	    position: relative;
+624	    cursor: default;
+625	    align-self: stretch;
+626	    flex: none;
+627	    -webkit-user-select: none;
+628	    width: 16px;
+629	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+630	    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" stroke="black" fill="black" width="16" height="16"><polygon points="8 11.031, 4.5 4.969, 11.5 4.969"/></svg>');
+631	    /* Make it easier to hit the button on iOS */
+632	    padding: 7px;
+633	    margin: -7px;
+634	#else
+635	    height: 100%;
+636	#endif
+637	}
+638	#endif
+639	
+640	keygen, select {
+641	    border-radius: 5px;
+642	}
+643	
+644	keygen::-webkit-keygen-select {
+645	    margin: 0px;
+646	}
+647	
+648	textarea {
+649	    -webkit-appearance: textarea;
+650	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+651	#if defined(WTF_PLATFORM_MAC) && WTF_PLATFORM_MAC
+652	    color: text;
+653	    background-color: -apple-system-control-background;
+654	#else
+655	    background-color: white;
+656	#endif
+657	    border: 1px solid;
+658	    -webkit-rtl-ordering: logical;
+659	    -webkit-user-select: text;
+660	#else
+661	    -webkit-nbsp-mode: space;
+662	    -webkit-line-break: after-white-space;
+663	#endif
+664	    flex-direction: column;
+665	    resize: auto;
+666	    cursor: auto;
+667	    padding: 2px;
+668	    white-space: pre-wrap;
+669	    word-wrap: break-word;
+670	}
+671	
+672	::placeholder {
+673	    -webkit-text-security: none;
+674	    color: darkGray;
+675	    pointer-events: none !important;
+676	}
+677	
+678	input::placeholder {
+679	    white-space: pre;
+680	    word-wrap: normal;
+681	    overflow: hidden;
+682	}
+683	
+684	input[type="password"] {
+685	    -webkit-text-security: disc !important;
+686	}
+687	
+688	input:matches([type="hidden"], [type="image"], [type="file"]) {
+689	    -webkit-appearance: initial;
+690	    padding: initial;
+691	    background-color: initial;
+692	    border: initial;
+693	}
+694	
+695	input[type="file"] {
+696	    align-items: baseline;
+697	    color: inherit;
+698	    text-align: start !important;
+699	}
+700	
+701	input:-webkit-autofill-strong-password {
+702	    -webkit-text-security: none !important;
+703	    -webkit-user-select: none !important;
+704	    cursor: default !important;
+705	    font-family: monospace;
+706	}
+707	
+708	input:-webkit-autofill, input:-webkit-autofill-strong-password {
+709	    background-color: #FAFFBD !important;
+710	    background-image: none !important;
+711	    color: #000000 !important;
+712	}
+713	
+714	input:matches([type="radio"], [type="checkbox"]) {
+715	    margin: 3px 2px;
+716	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+717	    border: 1px solid #4c4c4c;
+718	    box-sizing: border-box;
+719	#else
+720	    padding: initial;
+721	    background-color: initial;
+722	    border: initial;
+723	#endif
+724	}
+725	
+726	input:matches([type="button"], [type="submit"], [type="reset"]) {
+727	    -webkit-appearance: push-button;
+728	    white-space: pre;
+729	}
+730	
+731	input[type="file"]::-webkit-file-upload-button {
+732	    -webkit-appearance: push-button;
+733	    white-space: nowrap;
+734	    margin: 0;
+735	    font-size: inherit;
+736	}
+737	
+738	input:matches([type="button"], [type="submit"], [type="reset"]), input[type="file"]::-webkit-file-upload-button, button {
+739	    align-items: flex-start;
+740	    text-align: center;
+741	    cursor: default;
+742	    color: ButtonText;
+743	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+744	    padding: 2px 6px 3px 6px;
+745	    border: 2px outset ButtonFace;
+746	    background-color: ButtonFace;
+747	#else
+748	    padding: 0 1.0em;
+749	    border: 1px solid #4c4c4c;
+750	    /* We want to be as close to background-color:transparent as possible without actually being transparent. */
+751	    background-color: rgba(255, 255, 255, 0.01);
+752	    font: 11px Helvetica;
+753	#endif
+754	    box-sizing: border-box;
+755	}
+756	
+757	input:matches([type="button"], [type="submit"], [type="reset"]):active, input[type="file"]::-webkit-file-upload-button:active, button:active {
+758	    color: ActiveButtonText;
+759	}
+760	
+761	input[type="range"] {
+762	    -webkit-appearance: slider-horizontal;
+763	    padding: initial;
+764	    border: initial;
+765	    margin: 2px;
+766	    color: #909090;
+767	}
+768	
+769	input[type="range"]::-webkit-slider-container, input[type="range"]::-webkit-media-slider-container {
+770	    flex: 1;
+771	    box-sizing: border-box;
+772	    display: flex;
+773	    align-contents: center;
+774	}
+775	
+776	input[type="range"]::-webkit-slider-runnable-track {
+777	    flex: 1;
+778	    align-self: center;
+779	
+780	    box-sizing: border-box;
+781	    display: block;
+782	}
+783	
+784	input[type="range"]::-webkit-slider-thumb, input[type="range"]::-webkit-media-slider-thumb {
+785	    -webkit-appearance: sliderthumb-horizontal;
+786	    box-sizing: border-box;
+787	    display: block;
+788	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+789	    background-color: white;
+790	    border: 1px solid rgb(66, 66, 66);
+791	    padding: 0px;
+792	#endif
+793	}
+794	
+795	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+796	input[type="range"]::-webkit-slider-thumb:active {
+797	    background-color: black;
+798	}
+799	
+800	input:disabled, textarea:disabled {
+801	    opacity: 0.4;
+802	}
+803	
+804	input[readonly], textarea[readonly] {
+805	    border-color: rgb(188, 188, 188);
+806	}
+807	
+808	textarea::placeholder {
+809	    text-indent: 2px;
+810	}
+811	#endif
+812	
+813	input:matches([type="button"], [type="submit"], [type="reset"]):disabled,
+814	input[type="file"]:disabled::-webkit-file-upload-button, button:disabled,
+815	select:disabled, keygen:disabled, optgroup:disabled, option:disabled,
+816	select[disabled]>option {
+817	    color: GrayText;
+818	}
+819	
+820	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+821	input:matches([type="button"], [type="submit"], [type="reset"]):active, input[type="file"]:active::-webkit-file-upload-button, button:active {
+822	    border-style: inset;
+823	}
+824	
+825	input:matches([type="button"], [type="submit"], [type="reset"]):active:disabled,
+826	input[type="file"]:active:disabled::-webkit-file-upload-button, button:active:disabled {
+827	    border-style: outset;
+828	}
+829	#endif
+830	
+831	area, param {
+832	    display: none;
+833	}
+834	
+835	input[type="checkbox"] {
+836	    -webkit-appearance: checkbox;
+837	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+838	    box-sizing: border-box;
+839	#else
+840	    border-radius: 5px;
+841	    width: 16px;
+842	    height: 16px;
+843	    padding: 0px;
+844	    /* We want to be as close to background:transparent as possible without actually being transparent */
+845	    background-color: rgba(255, 255, 255, 0.01);
+846	#endif
+847	}
+848	
+849	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+850	input[type="radio"] {
+851	    -webkit-appearance: radio;
+852	    border-radius: 50%;
+853	    width: 16px;
+854	    height: 16px;
+855	    padding: 0px;
+856	    /* We want to be as close to background:transparent as possible without actually being transparent */
+857	    background-color: rgba(255, 255, 255, 0.01);
+858	}
+859	
+860	input[type="checkbox"]:indeterminate {
+861	    background: rgba(0, 0, 0, 0.8);
+862	}
+863	
+864	input[type="checkbox"]:indeterminate:disabled {
+865	    opacity: 0.4;
+866	    background: rgba(0, 0, 0, 0.8);
+867	}
+868	
+869	input:matches([type="checkbox"], [type="radio"]):checked {
+870	    background: rgba(0, 0, 0, 0.8);
+871	    border-color: rgba(255, 255, 255, 0.0);
+872	}
+873	
+874	input:matches([type="checkbox"], [type="radio"]):checked:disabled {
+875	    opacity: 0.4;
+876	    background: rgba(0, 0, 0, 0.8);
+877	}
+878	#endif
+879	
+880	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+881	input[type="radio"] {
+882	    -webkit-appearance: radio;
+883	    box-sizing: border-box;
+884	}
+885	#endif
+886	
+887	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+888	select:focus {
+889	    border-color: rgb(17, 46, 135);
+890	}
+891	#endif
+892	
+893	#if defined(ENABLE_INPUT_TYPE_COLOR) && ENABLE_INPUT_TYPE_COLOR
+894	
+895	input[type="color"] {
+896	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+897	    -webkit-appearance: color-well;
+898	#endif
+899	    width: 44px;
+900	    height: 23px;
+901	    outline: none;
+902	}
+903	
+904	input[type="color"]::-webkit-color-swatch-wrapper {
+905	    display: flex;
+906	    padding: 4px 2px 5px;
+907	    box-sizing: border-box;
+908	    width: 100%;
+909	    height: 100%;
+910	}
+911	
+912	input[type="color"]::-webkit-color-swatch {
+913	    background-color: #000000;
+914	    border-radius: 2px;
+915	    flex: 1;
+916	}
+917	
+918	#endif // defined(ENABLE_INPUT_TYPE_COLOR) && ENABLE_INPUT_TYPE_COLOR
+919	
+920	select {
+921	    box-sizing: border-box;
+922	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+923	    -webkit-appearance: menulist-button;
+924	    letter-spacing: normal;
+925	    word-spacing: normal;
+926	    line-height: normal;
+927	    border: 1px solid #4c4c4c;
+928	    /* We want to be as close to background:transparent as possible without actually being transparent */
+929	    background-color: rgba(255, 255, 255, 0.01);
+930	    font: 11px Helvetica;
+931	    padding: 0 0.4em 0 0.4em;
+932	#else
+933	    -webkit-appearance: menulist;
+934	    border: 1px solid;
+935	#if defined(WTF_PLATFORM_MAC) && WTF_PLATFORM_MAC
+936	    color: text;
+937	    background-color: -apple-system-control-background;
+938	#else
+939	    color: black;
+940	    background-color: white;
+941	#endif
+942	#endif
+943	    align-items: center;
+944	    white-space: pre;
+945	    -webkit-rtl-ordering: logical;
+946	    cursor: default;
+947	}
+948	
+949	#if !(defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS)
+950	select:matches([size], [multiple], [size][multiple]) {
+951	    -webkit-appearance: listbox;
+952	    align-items: flex-start;
+953	    border: 1px inset gray;
+954	    border-radius: initial;
+955	    white-space: initial;
+956	}
+957	
+958	select:matches([size="0"], [size="1"]) {
+959	    -webkit-appearance: menulist;
+960	    align-items: center;
+961	    border: 1px solid;
+962	    border-radius: 5px;
+963	    white-space: pre;
+964	}
+965	#endif
+966	
+967	optgroup {
+968	    font-weight: bolder;
+969	}
+970	
+971	option {
+972	    font-weight: normal;
+973	}
+974	
+975	output {
+976	    display: inline;
+977	}
+978	
+979	/* form validation message bubble */
+980	
+981	::-webkit-validation-bubble {
+982	    display: inline-block;
+983	    z-index: 2147483647;
+984	    position: absolute;
+985	    opacity: 0.95;
+986	    line-height: 0;
+987	    margin: 0;
+988	    -webkit-text-security: none;
+989	    transition: opacity 05.5s ease;
+990	}
+991	
+992	::-webkit-validation-bubble-message {
+993	    display: flex;
+994	    position: relative;
+995	    top: -4px;
+996	    font: message-box;
+997	    color: black;
+998	    min-width: 50px;
+999	    max-width: 200px;
+1000	    border: solid 2px #400;
+1001	    background: -webkit-gradient(linear, left top, left bottom, from(#f8ecec), to(#e8cccc));
+1002	    padding: 8px;
+1003	    border-radius: 8px;
+1004	    -webkit-box-shadow: 4px 4px 4px rgba(100,100,100,0.6),
+1005	        inset -2px -2px 1px #d0c4c4,
+1006	        inset 2px 2px 1px white;
+1007	    line-height: normal;
+1008	    white-space: normal;
+1009	    z-index: 2147483644;
+1010	}
+1011	
+1012	::-webkit-validation-bubble-text-block {
+1013	    flex: 1;
+1014	}
+1015	
+1016	::-webkit-validation-bubble-heading {
+1017	    font-weight: bold;
+1018	}
+1019	
+1020	::-webkit-validation-bubble-arrow {
+1021	    display: inline-block;
+1022	    position: relative;
+1023	    left: 32px;
+1024	    width: 16px;
+1025	    height: 16px;
+1026	    background-color: #f8ecec;
+1027	    border-width: 2px 0 0 2px;
+1028	    border-style: solid;
+1029	    border-color: #400;
+1030	    box-shadow: inset 2px 2px 1px white;
+1031	    -webkit-transform-origin: 0 0;
+1032	    transform: rotate(45deg);
+1033	    z-index: 2147483645;
+1034	}
+1035	
+1036	::-webkit-validation-bubble-arrow-clipper {
+1037	    display: block;
+1038	    overflow: hidden;
+1039	    height: 16px;
+1040	}
+1041	
+1042	#if defined(ENABLE_METER_ELEMENT) && ENABLE_METER_ELEMENT
+1043	/* meter */
+1044	
+1045	meter {
+1046	    -webkit-appearance: meter;
+1047	    box-sizing: border-box;
+1048	    display: inline-block;
+1049	    height: 1em;
+1050	    width: 5em;
+1051	    vertical-align: -0.2em;
+1052	}
+1053	
+1054	#endif
+1055	
+1056	/* progress */
+1057	
+1058	progress {
+1059	    -webkit-appearance: progress-bar;
+1060	    box-sizing: border-box;
+1061	    display: inline-block;
+1062	    height: 1em;
+1063	    width: 10em;
+1064	    vertical-align: -0.2em;
+1065	}
+1066	
+1067	progress::-webkit-progress-inner-element {
+1068	    -webkit-appearance: inherit;
+1069	    box-sizing: inherit;
+1070	    height: 100%;
+1071	    width: 100%;
+1072	}
+1073	
+1074	progress::-webkit-progress-bar {
+1075	    background-color: gray;
+1076	    height: 100%;
+1077	    width: 100%;
+1078	    box-sizing: border-box;
+1079	}
+1080	
+1081	progress::-webkit-progress-value {
+1082	    background-color: green;
+1083	    height: 100%;
+1084	    width: 50%; /* should be removed later */
+1085	    box-sizing: border-box;
+1086	}
+1087	
+1088	/* inline elements */
+1089	
+1090	u, ins {
+1091	    text-decoration: underline;
+1092	}
+1093	
+1094	strong, b {
+1095	    font-weight: bold;
+1096	}
+1097	
+1098	i, cite, em, var, address, dfn {
+1099	    font-style: italic;
+1100	}
+1101	
+1102	tt, code, kbd, samp {
+1103	    font-family: monospace;
+1104	}
+1105	
+1106	pre, xmp, plaintext, listing {
+1107	    display: block;
+1108	    font-family: monospace;
+1109	    white-space: pre;
+1110	    margin: 1__qem 0;
+1111	}
+1112	
+1113	mark {
+1114	    background-color: yellow;
+1115	    color: black;
+1116	}
+1117	
+1118	big {
+1119	    font-size: larger;
+1120	}
+1121	
+1122	small {
+1123	    font-size: smaller;
+1124	}
+1125	
+1126	s, strike, del {
+1127	    text-decoration: line-through;
+1128	}
+1129	
+1130	sub {
+1131	    vertical-align: sub;
+1132	    font-size: smaller;
+1133	}
+1134	
+1135	sup {
+1136	    vertical-align: super;
+1137	    font-size: smaller;
+1138	}
+1139	
+1140	nobr {
+1141	    white-space: nowrap;
+1142	}
+1143	
+1144	/* states */
+1145	
+1146	:focus {
+1147	    outline: auto 5px -webkit-focus-ring-color;
+1148	}
+1149	
+1150	/* Read-only text fields do not show a focus ring but do still receive focus */
+1151	html:focus, body:focus, input[readonly]:focus, applet:focus, embed:focus, iframe:focus, object:focus {
+1152	    outline: none;
+1153	}
+1154	
+1155	input:focus, textarea:focus, keygen:focus, select:focus {
+1156	    outline-offset: -2px;
+1157	}
+1158	
+1159	input:matches([type="button"], [type="checkbox"], [type="file"], [type="hidden"], [type="image"], [type="radio"], [type="reset"], [type="search"], [type="submit"]):focus,
+1160	input[type="file"]:focus::-webkit-file-upload-button {
+1161	    outline-offset: 0;
+1162	}
+1163	
+1164	a:any-link {
+1165	    color: -webkit-link;
+1166	    text-decoration: underline;
+1167	    cursor: auto;
+1168	}
+1169	
+1170	a:any-link:active {
+1171	    color: -webkit-activelink;
+1172	}
+1173	
+1174	/* HTML5 ruby elements */
+1175	
+1176	ruby, rt {
+1177	    text-indent: 0; /* blocks used for ruby rendering should not trigger this */
+1178	}
+1179	
+1180	rt {
+1181	    line-height: normal;
+1182	    -webkit-text-emphasis: none;
+1183	}
+1184	
+1185	ruby > rt {
+1186	    display: block;
+1187	    font-size: -webkit-ruby-text;
+1188	    text-align: start;
+1189	}
+1190	
+1191	ruby > rp {
+1192	    display: none;
+1193	}
+1194	
+1195	/* other elements */
+1196	
+1197	noframes {
+1198	    display: none;
+1199	}
+1200	
+1201	frameset, frame {
+1202	    display: block;
+1203	}
+1204	
+1205	frameset {
+1206	    border-color: inherit;
+1207	}
+1208	
+1209	iframe {
+1210	    border: 2px inset;
+1211	}
+1212	
+1213	details {
+1214	    display: block;
+1215	}
+1216	
+1217	summary {
+1218	    display: block;
+1219	}
+1220	
+1221	summary::-webkit-details-marker {
+1222	    display: inline-block;
+1223	    width: 0.66em;
+1224	    height: 0.66em;
+1225	    margin-right: 0.4em;
+1226	}
+1227	
+1228	template {
+1229	    display: none;
+1230	}
+1231	
+1232	bdi, output {
+1233	    unicode-bidi: isolate;
+1234	}
+1235	
+1236	bdo {
+1237	    unicode-bidi: bidi-override;
+1238	}
+1239	
+1240	slot {
+1241	    display: contents;
+1242	}
+1243	
+1244	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+1245	applet, embed, object, img {
+1246	    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+1247	}
+1248	:any-link img {
+1249	    -webkit-tap-highlight-color: inherit;
+1250	}
+1251	#endif
+1252	
+1253	#if defined(ENABLE_ATTACHMENT_ELEMENT) && ENABLE_ATTACHMENT_ELEMENT
+1254	attachment {
+1255	    -webkit-appearance: attachment;
+1256	#if defined(WTF_PLATFORM_IOS) && WTF_PLATFORM_IOS
+1257	    color: -apple-system-blue;
+1258	#endif
+1259	}
+1260	#endif
+1261	
+1262	/* page */
+1263	
+1264	@page {
+1265	    /* FIXME: Define the right default values for page properties. */
+1266	    size: auto;
+1267	    margin: auto;
+1268	    padding: 0px;
+1269	    border-width: 0px;
+1270	}
+1271	
+1272	/* noscript is handled internally, as it depends on settings. */
+1273	
+1274	/* Default support for "Smart Invert" where all content color except media is inverted. */ 
+1275	@media (inverted-colors) {
+1276	    img:not(picture>img), picture, video { filter: invert(100%); } /* Images and videos double-inverted. */
+1277	}
