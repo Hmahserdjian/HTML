@@ -5,25 +5,18 @@
     background-size: cover;
     color: darkorange;    
 }
-/* body {
-
-} */
-.footer {
+/* git */
+.containerf {
 
     /* background-color: chartreuse; */
     color: black;
-    
+    background-color: aqua;
     position: bottom;
     height: 25px;
-    
-    
+
 }
  
-.footer {
-    background: orange;
-    padding:45px;
- 
-} 
+
 
  /* .p {
 text-align: center;
@@ -38,13 +31,14 @@ text-align: center;
 .card {
     width: 55%;
     justify-content: flex-start;
+    margin: 25%
 }
 
 .p {
    align-content: space-around;
 }
 
-.containera {
+.container {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
